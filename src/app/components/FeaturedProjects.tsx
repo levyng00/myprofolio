@@ -3,12 +3,22 @@ import Section from "./lib/Section";
 import mockup1 from "@/assets/aqkghvjskoUm_1280_800.png";
 import mockup2 from "@/assets/x3o2xHbrKUyJ_1280_800.png";
 import Image from "next/image";
+import Link from "next/link";
 const FeaturedProjects = () => {
   return (
     <Section className="py-20 lg:py-36 px-8">
       <div className="flex flex-col lg:flex-row lg:gap-20 gap-10 justify-center ">
         <h1 className="text-3xl font-semibold ">Featured Projects</h1>
         <div className="lg:w-[80vh]">
+          <div className="mt-5 text-center text-2xl">
+            <Link
+              href="https://www.bonatra.com/"
+              className="font-medium hover:text-blue-500"
+            >
+              Bonatra Website
+            </Link>
+          </div>
+
           {imageData.map((data, i) => {
             return (
               <div key={i} className=" mt-10  flex flex-col items-center ">

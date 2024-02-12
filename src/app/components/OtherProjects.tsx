@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "./lib/Section";
+import { MoveRight } from "lucide-react";
 
 const OtherProjects = () => {
   return (
@@ -9,8 +10,11 @@ const OtherProjects = () => {
         <div className="lg:w-[80vh]">
           {projectData.map((data, i) => {
             return (
-              <div key={i} className="lg:mt-5 mb-10">
-                <h1 className="mb-3 font-semibold">{data.name}</h1>
+              <div key={i} className="lg:mt-5 mb-20">
+                <div className="flex gap-3">
+                  <h1 className="mb-3 font-semibold">{data.name}</h1>
+                  <MoveRight />
+                </div>
                 <p className="font-light">{data.desc}</p>
                 <div className="flex gap-5 flex-wrap">
                   {data.techStack.map((tech, i) => {
