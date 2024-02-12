@@ -2,14 +2,16 @@ import React from "react";
 import Section from "./lib/Section";
 
 const Skills = () => {
-  const skillMap = skillsData.map((skill) => {
-    const skillArr = skill.skills.map((arr) => (
-      <li className=" mt-2 text-[#FFFFFF89]">{arr}</li>
+  const skillMap = skillsData.map((skill, i) => {
+    const skillArr = skill.skills.map((arr, i) => (
+      <li className=" mt-2 text-[#FFFFFF89]" key={i}>
+        {arr}
+      </li>
     ));
     return (
-      <ul>
+      <ul key={i}>
         <p className="font-bold"> {skill.heading}</p>
-        <li className="mt-3 ">{skillArr}</li>
+        <div className="mt-3 ">{skillArr}</div>
       </ul>
     );
   });

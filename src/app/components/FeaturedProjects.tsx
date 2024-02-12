@@ -5,13 +5,13 @@ import mockup2 from "@/assets/x3o2xHbrKUyJ_1280_800.png";
 import Image from "next/image";
 const FeaturedProjects = () => {
   return (
-    <Section className="py-36 px-8">
+    <Section className="py-20 lg:py-36 px-8">
       <div className="flex flex-col lg:flex-row lg:gap-20 gap-10 justify-center ">
         <h1 className="text-3xl font-semibold ">Featured Projects</h1>
         <div className="lg:w-[80vh]">
-          {imageData.map((data) => {
+          {imageData.map((data, i) => {
             return (
-              <div className=" mt-10  flex flex-col items-center ">
+              <div key={i} className=" mt-10  flex flex-col items-center ">
                 <Image src={data.img} height={500} width={500} alt="img" />
                 <p className="text-center text-[#FFFFFF89] mt-3">{data.desc}</p>
               </div>
@@ -20,9 +20,12 @@ const FeaturedProjects = () => {
           <div className=" mt-16">
             <p>Technologies used for development</p>
             <ul className="flex gap-5 mt-5 flex-wrap">
-              {techData.map((li) => {
+              {techData.map((li, i) => {
                 return (
-                  <li className="border border-white p-2 rounded-xl text-xs flex items-center ">
+                  <li
+                    className="border border-white p-2 rounded-xl text-xs flex items-center "
+                    key={i}
+                  >
                     {li}
                   </li>
                 );
