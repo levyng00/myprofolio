@@ -42,11 +42,28 @@ export default FeaturedProjects;
 const imageData = [
   {
     img: mockup2,
-    desc: "Played a crucial role in implementing the frontend of the website, utilizing modern web technologies and frameworks  to create dynamic and visually appealing user interfaces.",
+    desc: (
+      <p>
+        <span className="text-white"> Played a crucial role in </span>
+        implementing the frontend of the website, utilizing modern web
+        technologies and{" "}
+        <span className="text-white">frameworks to create dynamic and </span>
+        visually appealing user interfaces.
+      </p>
+    ),
   },
   {
     img: mockup1,
-    desc: "I contributed to the implementation of key features and functionalities of the website, such as navigation systems, user authentication, content ,ecommerce platform,management, and data visualization components.",
+    desc: (
+      <p>
+        I contributed to the implementation of key features and functionalities
+        of the website, such as{" "}
+        <span className="text-white">
+          navigation systems, user authentication, content, ecommerce platform,
+          management, and data visualization components.
+        </span>{" "}
+      </p>
+    ),
   },
 ];
 

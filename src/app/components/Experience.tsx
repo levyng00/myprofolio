@@ -10,11 +10,11 @@ const Experience = () => {
           {workData.map((data, i) => {
             return (
               <div className="flex justify-between lg:mt-5 " key={i}>
-                <div className="text-sm lg:text-lg">
-                  <p className="font-bold">{data.compName}</p>
-                  <p className="text-[#FFFFFF89]">{data.position}</p>
+                <div className="text-xs lg:text-lg mb-5">
+                  <p className="font-bold text-sm">{data.compName}</p>
+                  <p className="text-[#FFFFFF89] text-xs">{data.position}</p>
                 </div>
-                <p className="text-sm lg:text-lg">{data.joiningDate}</p>
+                <p className="text-xs lg:text-lg">{data.joiningDate}</p>
               </div>
             );
           })}
